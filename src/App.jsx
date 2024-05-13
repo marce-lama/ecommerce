@@ -1,16 +1,20 @@
-import Navbar from "./Navbar"
-import { Footer } from "./Footer"
-import { Home } from "./Home"
+import Navbar from "./components/layout/navbar/Navbar"
+import HomeContainer from "./components/pages/home/HomeContainer"
+import ItemListContainer from "./components/pages/itemList/ItemListContainer"
 
 function App() {
 
+  let nombre = "Marcelo"
+  let edad = 10
+
+  const saludo = "Hola! Como estas? Espero que muy bien!"
+
   return (
-    <>
-    <h1>Hola Mundo</h1>
+  <div>
     <Navbar />
-    <Footer />
-    <Home />
-    </>
+    <HomeContainer nombre={nombre} edad={edad}/>
+    <ItemListContainer saludo={saludo}/>
+  </div>
   )
 }
 
