@@ -1,19 +1,19 @@
+import { useState } from "react"
 import Navbar from "./components/layout/navbar/Navbar"
-import HomeContainer from "./components/pages/home/HomeContainer"
 import ItemListContainer from "./components/pages/itemList/ItemListContainer"
 
 function App() {
 
-  let nombre = "Marcelo"
-  let edad = 10
-
-  const saludo = "Hola! Como estas? Espero que muy bien!"
+  const [mostrarComponentes, setMostrarComponentes] = useState(false)
 
   return (
   <div>
     <Navbar />
-    <HomeContainer nombre={nombre} edad={edad}/>
-    <ItemListContainer saludo={saludo}/>
+
+    {mostrarComponentes ? <ItemListContainer /> : null}
+    
+    <button onClick={()=>setMostrarComponentes(!mostrarComponentes)}>Mostrar Componente</button>
+    
   </div>
   )
 }

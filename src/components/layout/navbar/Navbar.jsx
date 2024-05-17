@@ -1,5 +1,8 @@
 import CartWidget from "../../common/cartWidget/CartWidget"
 import "./Navbar.css"
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 
 const Navbar = () => {
@@ -11,7 +14,7 @@ const Navbar = () => {
             <li>Contacto</li>
             <li>About</li>
         </ul>
-        <CartWidget />
+    <CartWidget />
     </div>
   )
 }

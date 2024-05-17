@@ -1,10 +1,13 @@
+import { useState } from "react"
 import ItemList from "./ItemList"
 
-const ItemListContainer = ({saludo}) => {
-    let apellido = "Perez"
+const ItemListContainer = () => {
+  const [productos, setProductos] = useState([])
+  const [edad, setEdad] = useState(20)
+  console.log("Se monto o se actualizo")
 
   return (
-    <ItemList apellido={apellido} saludo={saludo}/>
+    <ItemList edad={edad} setEdad={setEdad} productos={productos} setProductos={setProductos}/>
   )
 }
 
