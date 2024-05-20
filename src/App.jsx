@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Navbar from "./components/layout/navbar/Navbar"
 import ItemListContainer from "./components/pages/itemList/ItemListContainer"
+import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer"
 
 function App() {
 
@@ -9,10 +10,11 @@ function App() {
   return (
   <div>
     <Navbar />
+    <button onClick={()=>setMostrarComponentes(!mostrarComponentes)}>Mostrar Componente</button>
 
     {mostrarComponentes ? <ItemListContainer /> : null}
     
-    <button onClick={()=>setMostrarComponentes(!mostrarComponentes)}>Mostrar Componente</button>
+    <ItemDetailContainer />
     
   </div>
   )
